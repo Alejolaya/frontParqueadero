@@ -3,19 +3,19 @@
   <div style="padding: 10px"></div>
   <div class="form-group">
     <label for="tipoVehiculo">Tipo vehiculo</label>
-    <input type="text" class="form-control" id="tipoVehiculo" aria-describedby="tipoVHelp" placeholder="Ingrese una M si es moto o una C si es carro">
+    <input type="text" class="form-control" name="tipoVehiculo" [(ngModel)]="vehiculo.placa" aria-describedby="tipoVHelp" placeholder="Ingrese una M si es moto o una C si es carro">
     <small id="tipoVHelp" class="form-text text-muted">Cualquier letra que no sea M sera tomada como carro</small>
   </div>
 
   <div class="form-group">
       <label for="placa">Placa</label>
-      <input type="text" class="form-control" id="placa" aria-describedby="placaHelp" placeholder="Ingrese la placa">
+      <input type="text" class="form-control" name="placa" [(ngModel)]="vehiculo.tipoVehiculo" aria-describedby="placaHelp" placeholder="Ingrese la placa">
       <small id="placaHelp" class="form-text text-muted">Si comienza con A solo puede ingresar domingo y lunes</small>
     </div>
 
     <div class="form-group">
-        <label for="cilindraje">Tipo vehiculo</label>
-        <input type="text" class="form-control" id="cilindraje" aria-describedby="cilindrajeHelp" placeholder="Ingrese el cilindraje">
+        <label for="cilindraje">Cilindraje</label>
+        <input type="text" class="form-control" name="cilindraje" id="cilindraje" [(ngModel)]="vehiculo.cilindraje" aria-describedby="cilindrajeHelp" placeholder="Ingrese el cilindraje">
         <small id="cilindrajeHelp" class="form-text text-muted">Si es moto este campo es obligatorio</small>
       </div>
 
