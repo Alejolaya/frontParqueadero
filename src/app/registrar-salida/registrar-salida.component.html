@@ -1,3 +1,21 @@
-<p>
-  registrar-salida works!
-</p>
+<form>
+    <h1>Registrar salida</h1>
+    <div *ngIf="!isValid" class="alert alert-danger" role="alert">
+        {{message}}
+    </div>
+    <div *ngIf="isOK" class="alert alert-success" role="alert">
+        {{messageCobro}}
+    </div>
+    <div style="padding: 10px"></div>
+  
+    <div class="form-group">
+        <label for="placa">*Placa</label>
+        <input type="text" class="form-control" name="placa" [(ngModel)]="parqueo.placa" aria-describedby="placaHelp" placeholder="Ingrese la placa">
+        <small id="placaHelp" class="form-text text-muted">Si es moto con cilindraje mayor a 500cc debe pagar adicional</small>
+      </div>
+  
+
+  
+  
+    <button type="submit" (click)="registrarSalida()" class="btn btn-primary">Salida</button>
+  </form>

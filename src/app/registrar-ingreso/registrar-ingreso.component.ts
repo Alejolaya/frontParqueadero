@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { RegistrarIngresoService } from './registrar-ingreso.service';
 
+import { RegistrarIngresoService } from './registrar-ingreso.service';
 import { VehiculoModel } from './../model/vehiculo.model';
 import { OK } from '../model/httpStatus';
 
@@ -15,6 +15,9 @@ export class RegistrarIngresoComponent implements OnInit {
   private vehiculo: VehiculoModel;
   private isValid : boolean= true;
   private message : string = "";
+  private isOK : boolean = false;
+  private messageOK : string = "";
+  
   constructor(private registrarIngresoService: RegistrarIngresoService) {
     this.vehiculo = new VehiculoModel();
    }
@@ -28,7 +31,8 @@ export class RegistrarIngresoComponent implements OnInit {
     if(this.isValid){
       this.registrarIngresoService.registrar(this.vehiculo).subscribe(res=>{
         if(res.responseCode == OK){
-
+          this.isOK=true;
+          this.messageOK= res.message;
         }else{
           this.message=res.message;
           this.isValid= false;

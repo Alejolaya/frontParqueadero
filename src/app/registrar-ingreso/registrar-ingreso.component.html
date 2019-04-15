@@ -2,7 +2,10 @@
   <h1>Registrar ingreso</h1>
   <div *ngIf="!isValid" class="alert alert-danger" role="alert">
       {{message}}
-    </div>
+  </div>
+  <div *ngIf="isOK" class="alert alert-success" role="alert">
+      {{messageOK}}
+  </div>
   <div style="padding: 10px"></div>
   <div class="form-group">
     <label for="tipoVehiculo">*Tipo vehiculo</label>
