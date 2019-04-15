@@ -36,10 +36,12 @@ export class RegistrarIngresoComponent implements OnInit {
         }else{
           this.message=res.message;
           this.isValid= false;
+          this.isOK=false;
         }
       });
     }else{
       this.message="Los campos con * son obligatorios"
+      this.isOK=false;
     }
 
 

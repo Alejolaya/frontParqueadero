@@ -39,6 +39,7 @@ export class RegistrarSalidaComponent implements OnInit {
       });
     }else{
       this.message="los campos con * son obligatorios"
+      this.isOK = false;
     }
     
   }
