@@ -7,11 +7,13 @@ import {HttpClientModule} from '@angular/common/http'
 import {FormsModule} from '@angular/forms'
 
 import { RegistrarIngresoComponent } from './registrar-ingreso/registrar-ingreso.component';
+import { RegistrarSalidaComponent } from './registrar-salida/registrar-salida.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    RegistrarIngresoComponent
+    RegistrarIngresoComponent,
+    RegistrarSalidaComponent
   ],
   imports: [
     BrowserModule,
